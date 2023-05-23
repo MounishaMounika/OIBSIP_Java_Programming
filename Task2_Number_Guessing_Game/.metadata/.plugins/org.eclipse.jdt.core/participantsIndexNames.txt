@@ -1,0 +1,9 @@
+INDEX VERSION 1.131
+C:\Users\mounika mounisha\Favorites\Documents\Java_Learning\Task2_Number_Guessing_Game\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3678696768.index
+\NumberGuessingGame\src\main\java
+C:\Users\mounika mounisha\Favorites\Documents\Java_Learning\Tas2_Number_Guessing_Game\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2196647488.index
+\NumberGuessingGame\src\main\resources
+C:\Users\mounika mounisha\Favorites\Documents\Java_Learning\Task2_Number_Guessing_Game\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2196647488.index
+\NumberGuessingGame\src\main\resources
+C:\Users\mounika mounisha\Favorites\Documents\Java_Learning\Task2_Number_Guessing_Game\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1901994113.index
+\NumberGuessingGame\src\main\java

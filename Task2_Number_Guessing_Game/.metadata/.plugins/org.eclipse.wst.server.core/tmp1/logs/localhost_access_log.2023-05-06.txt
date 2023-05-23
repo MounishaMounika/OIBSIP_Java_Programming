@@ -1,0 +1,6 @@
+127.0.0.1 - - [06/May/2023:21:51:21 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [06/May/2023:21:51:35 +0530] "GET /NumberGuessingGame/ HTTP/1.1" 200 481
+0:0:0:0:0:0:0:1 - - [06/May/2023:21:51:35 +0530] "GET /NumberGuessingGame/css/myStyle.css HTTP/1.1" 200 279
+0:0:0:0:0:0:0:1 - - [06/May/2023:21:51:43 +0530] "POST /NumberGuessingGame/Game HTTP/1.1" 200 359
+0:0:0:0:0:0:0:1 - - [06/May/2023:21:51:43 +0530] "GET /NumberGuessingGame/css/style.css HTTP/1.1" 200 298
+0:0:0:0:0:0:0:1 - - [06/May/2023:21:51:46 +0530] "GET /NumberGuessingGame/index.jsp? HTTP/1.1" 200 481

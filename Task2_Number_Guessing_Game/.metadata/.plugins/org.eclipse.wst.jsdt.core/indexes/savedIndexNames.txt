@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\mounika mounisha\Favorites\Documents\Java_Learning\Task2_Number_Guessing_Game\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1626990566.index
+614842256.index
+3984250477.index
+1163570974.index
+1592995743.index
+3573821964.index
