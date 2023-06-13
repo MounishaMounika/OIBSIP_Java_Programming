@@ -1,7 +1,0 @@
-INDEX VERSION 1.4+C:\Users\mounika mounisha\Favorites\Documents\Java_Learning\Task3_ATM_Interface\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-284650674.index
-2467255830.index
-171012108.index
-309462649.index
-3161931801.index
-2263677399.index
