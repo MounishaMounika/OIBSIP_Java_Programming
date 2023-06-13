@@ -1,0 +1,65 @@
+package com.ATM_Interface.Controller;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.ATM_Interface.Beans.RegisterBean;
+import com.ATM_Interface.Model.UserDb;
+
+/**
+ * Servlet implementation class Login
+ */
+public class Login extends HttpServlet {
+	long accountNumber,pin;
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Login() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+		
+		long accountNumber=Integer.parseInt(request.getParameter("accountNumber"));
+		long pin=Integer.parseInt(request.getParameter("pin"));
+		
+		RegisterBean rb=new RegisterBean();
+		
+		rb.setAccountNumber(accountNumber);
+		rb.setPin(pin);
+		
+		UserDb ud=new UserDb();
+		boolean accountExists=ud.getData(rb);
+		
+		if(accountExists)
+		{
+			response.sendRedirect(request.getContextPath() + "/homepage.jsp");
+		}else
+		{
+			request.setAttribute("errorMessage", "Account Number or Pin is Incorrect");
+	        request.getRequestDispatcher("index.jsp").forward(request, response);
+	        return;	
+		}
+		
+	}
+
+}

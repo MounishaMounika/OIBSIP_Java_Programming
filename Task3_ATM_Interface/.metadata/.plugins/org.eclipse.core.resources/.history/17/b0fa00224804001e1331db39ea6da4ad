@@ -1,0 +1,66 @@
+package com.ATM_Interface.Model;
+
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.ATM_Interface.Beans.RegisterBean;
+
+public class UserDb {
+	
+	//Insert Data into register table	
+	public void insertUser(RegisterBean rb) {
+		
+		MyDb db=new MyDb();
+		Connection con=db.getCon();
+		try {
+			Statement stmt=con.createStatement();
+			stmt.executeUpdate("insert into atm.register(accountNumber,pin,confirmPin,userName,education,occupation,PhoneNo,DOB) values ('"+rb.getAccountNumber()+"','"+rb.getPin()+"','"+rb.getConfirmPin()+"','"+rb.getName()+"','"+rb.getEducation()+"','"+rb.getOccupation()+"','"+rb.getPhone()+"','"+rb.getDob()+"')");
+			stmt.executeUpdate("insert into atm.amount(accountNumber) values ('"+rb.getAccountNumber()+"')");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	//Checking whether the account exists or not 
+	public boolean checkAccountExists(long accountNumber) {
+	    MyDb db = new MyDb();
+	    Connection con = db.getCon();
+	    boolean exists = false;
+	    try {
+	        Statement stmt = con.createStatement();
+	        ResultSet rs = stmt.executeQuery("select accountNumber from atm.register where accountNumber = '" + accountNumber + "'");
+	        if (rs.next()) {
+	            exists = true;
+	        }
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+	    return exists;
+	}
+	
+	//Getting account number and pin for login
+	public boolean getData(RegisterBean rb)
+	{
+		boolean exists = false;
+		MyDb db=new MyDb();
+		Connection con=db.getCon();
+		try {
+			Statement stmt=con.createStatement();
+			ResultSet rs=stmt.executeQuery("select accountNumber,pin from atm.register where accountNumber = '" + rb.getAccountNumber() + "' and pin='"+rb.getPin()+"'");
+			 if (rs.next()) {
+		            exists = true;
+		        }
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return exists;
+	}
+
+}

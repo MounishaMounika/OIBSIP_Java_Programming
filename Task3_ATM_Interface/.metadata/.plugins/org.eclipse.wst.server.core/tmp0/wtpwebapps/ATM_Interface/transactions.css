@@ -1,0 +1,44 @@
+@charset "ISO-8859-1";
+
+.historyTable {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.historyTable th,
+.historyTable td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.historyTable th {
+    background-color: #f2f2f2;
+}
+
+.back-link {
+  display: inline-block;
+    background-color: #16a085;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+  
+}
+
+.submitButton{
+  color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+    background: #16a085;
+    border: 1px solid #16a085;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 150px;
+    margin-left: 40px;
+}
